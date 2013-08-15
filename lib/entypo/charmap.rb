@@ -37,7 +37,7 @@ module Entypo
 
     def load(path)
       File.read(path).split("\n").map do |line|
-        if line =~ %r{\A\.(icon-[a-z0-9\-]+):before.*/\* ([0-9a-f]+)}
+        if line =~ %r{\A\.(icon-entypo-[a-z0-9\-]+):before.*/\* ([0-9a-f]+)}
           Icon.new($1, $2)
         end
       end.compact.sort
